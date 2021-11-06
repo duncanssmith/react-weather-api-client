@@ -10,7 +10,7 @@ function App() {
   const example = [1,2,3,4,5,6]
 
   const getWeather = () => {
-    Axios.get("https://api.openweathermap.org/data/2.5/forecast?q=London&mode=json&units=metric&appid=786986c790691a6fe26c60fcd9fae106").then((response)=>{
+    Axios.get(API_URL).then((response)=>{
       console.log(response);
 
       // clone the response
@@ -39,9 +39,9 @@ function App() {
       // setCount(response.data.cnt)
     });
   }
-  console.log("DUNCAN DEBUG");
+  console.log("DS DEBUG");
   return <div>
-    Hello Duncan <button onClick={getWeather}>Get weather right now</button>
+    Hello World <button onClick={getWeather}>Get weather right now</button>
     <br/>
     <hr/>
     {/* {count} */}
